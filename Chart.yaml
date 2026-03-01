@@ -1,0 +1,15 @@
+apiVersion: v2
+name: tunnel-interface
+description: DaemonSet to enable /dev/net/tun for VPN and tunnel workloads (e.g. WireGuard). Uses squat/generic-device-plugin.
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+kubeVersion: ">=1.22.0-0"
+keywords:
+  - tun
+  - vpn
+  - device-plugin
+  - kube-system
+home: https://github.com/squat/generic-device-plugin
+sources:
+  - https://github.com/squat/generic-device-plugin
