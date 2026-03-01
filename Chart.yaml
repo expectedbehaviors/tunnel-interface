@@ -13,3 +13,7 @@ keywords:
 home: https://github.com/squat/generic-device-plugin
 sources:
   - https://github.com/squat/generic-device-plugin
+dependencies:
+  - name: onepassworditem
+    version: "1.1.1"
+    repository: https://expectedbehaviors.github.io/OnePasswordItem-helm

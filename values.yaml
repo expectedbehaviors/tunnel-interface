@@ -1,1 +1,6 @@
 name: generic-device-plugin
+
+# 1Password: optional. Subchart expectedbehaviors/OnePasswordItem-helm. Set enabled: false if not using 1Password.
+onepassworditem:
+  enabled: true
+  items: []
