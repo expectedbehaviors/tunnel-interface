@@ -2,6 +2,14 @@
 
 DaemonSet that enables `/dev/net/tun` for VPN and tunnel workloads (e.g. WireGuard) using [squat/generic-device-plugin](https://github.com/squat/generic-device-plugin). Deploy to `kube-system` (or your chosen namespace).
 
+## Subcharts
+
+| Subchart | Source | Values prefix | Description |
+|----------|--------|---------------|-------------|
+| **onepassworditem** | [expectedbehaviors/OnePasswordItem-helm](https://github.com/expectedbehaviors/OnePasswordItem-helm) | `onepassworditem.*` | Optional secrets sync into the release namespace (e.g. for workloads using the tun device). |
+
+All inputs: **`name`** (DaemonSet/container name; default `generic-device-plugin`), **`onepassworditem.enabled`**, **`onepassworditem.items`**. Defaults: see `values.yaml`.
+
 ## Chart contents
 
 - **DaemonSet:** One pod per node; exposes `/dev/net/tun` to the device plugin API.
