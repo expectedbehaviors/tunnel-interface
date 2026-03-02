@@ -10,6 +10,24 @@ DaemonSet that enables `/dev/net/tun` for VPN and tunnel workloads (e.g. WireGua
 
 All inputs: **`name`** (DaemonSet/container name; default `generic-device-plugin`), **`onepassworditem.enabled`**, **`onepassworditem.items`**. Defaults: see `values.yaml`.
 
+## Configuration reference (all inputs)
+
+Every value accepted by this chart is documented below. This chart provides a DaemonSet (generic-device-plugin for `/dev/net/tun`) and optionally the onepassworditem subchart.
+
+### Root: chart-specific
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `name` | string | `"generic-device-plugin"` | DaemonSet and container name. |
+
+### Subchart: onepassworditem
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `onepassworditem.enabled` | bool | `true` | Create OnePasswordItem resources; set `false` if not using 1Password. |
+| `onepassworditem.defaultVault` | string | `""` | Default vault for items. |
+| `onepassworditem.items` | list | `[]` | List of `{ item, name, type }`; optional `vault`, `namespace`, `annotations`, `labels`. |
+
 ## Chart contents
 
 - **DaemonSet:** One pod per node; exposes `/dev/net/tun` to the device plugin API.
