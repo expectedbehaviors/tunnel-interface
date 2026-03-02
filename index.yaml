@@ -2,8 +2,32 @@ apiVersion: v1
 entries:
   tunnel-interface:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2026-03-02T05:43:33.525399389Z"
+    dependencies:
+    - name: onepassworditem
+      repository: https://expectedbehaviors.github.io/OnePasswordItem-helm
+      version: 1.1.1
+    description: DaemonSet to enable /dev/net/tun for VPN and tunnel workloads (e.g.
+      WireGuard). Uses squat/generic-device-plugin.
+    digest: ef0dbe4e3a0e6e78f1e6b1e48190b928e9f162ca418d2e3c7d5b201930e198e7
+    home: https://github.com/squat/generic-device-plugin
+    keywords:
+    - tun
+    - vpn
+    - device-plugin
+    - kube-system
+    kubeVersion: '>=1.22.0-0'
+    name: tunnel-interface
+    sources:
+    - https://github.com/squat/generic-device-plugin
+    type: application
+    urls:
+    - https://expectedbehaviors.github.io/tunnel-interface/tunnel-interface-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-03-01T08:00:17.715698621Z"
+    created: "2026-03-02T05:43:33.523657046Z"
     dependencies:
     - name: onepassworditem
       repository: https://expectedbehaviors.github.io/OnePasswordItem-helm
@@ -25,4 +49,4 @@ entries:
     urls:
     - https://expectedbehaviors.github.io/tunnel-interface/tunnel-interface-1.0.0.tgz
     version: 1.0.0
-generated: "2026-03-01T08:00:17.71437494Z"
+generated: "2026-03-02T05:43:33.522276616Z"
